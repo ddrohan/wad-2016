@@ -7,14 +7,14 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/solarized_light.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
 
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2/semantic.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/languages/java.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
       <style>
@@ -36,10 +36,6 @@ figcaption
   align-items: center;
 }
 
-.credits
-{
-  min-height:20px;
-}
 
 
     </style>
@@ -47,54 +43,187 @@ figcaption
   </head>
 
   <body>
-
     
 
 
 
-  <div class="ui container">
-    
 
 
-  <header class="ui middle aligned center aligned stackable grid segment">
-    <a class="ui blue left corner label">
-      <i class="sitemap big  icon"></i>
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Dynamic Web Development</h2>
+    <p> Top Level Topics </p>
+  </div>
+
+  
+<div class="two wide column sitemap">
+  <div class="popup" data-content="Top Level Topic View">
+    <a href="#"> <i class="huge home icon"></i> Topics </a>
+  </div>
+</div>
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    David Drohan (ddrohan@wit.ie).
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
     </a>
-    <div class="eight wide center aligned column">
-      <h2 class="headder">    Web Application Development </h2>
-    </div>
-    <div class="one wide column sitemap">
-      <div class="popup" data-content="Top Level Topic View">
-        <a href="index.html"> <i class="big sitemap icon"></i>  topics </a>
-      </div>
-    </div>
-    <div class="one wide column">
-      <div class="popup" data-content="All Presentations">
-        <a href="talkwall.html"> <i class="big film icon"></i>  slides </a>
-      </div>
-    </div>
-    <div class="one wide column">
-      <div class="popup" data-content="All Labs">
-        <a href="labwall.html"> <i class="big lab icon"></i> labs </a>
-      </div>
-    </div>
-    <div class="five wide column">
-      <img class="ui centered medium image" src="http://www.wit.ie/assets/images/wit_crest.png">
-    </div>
-  </header>
+  </div>
+</div>
 
-<script>
-  $('.popup')
-  .popup()
-;
-</script>
-
-
-
-<div class="ui four doubling stackable cards">
 
   
-  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted inline vertical sidebar menu">
+    
+    <div class="header">
+      <a class="item" href="topic01-intro/index.html">
+        1: Overview
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic01-intro/talk-1-intro/intro.pdf">
+          Module Overview</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-intro/talk-2-javascript/javascript.pdf">
+          JavaScript Overview</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-intro/talk-3-rest/rest.pdf">
+          Introdcution to REST</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-intro/talk-4-web-apps/webapps.pdf">
+          Web Apps Overview</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01-intro/book-a-lab00/index.html">
+          Setup</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic02-node/index.html">
+        2: Node.js
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic02-node/talk-1-node-1/node.1.pdf">
+          Node - Part 1</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-node/talk-2-node-2/node.2.pdf">
+          Node - Part 2</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-node/talk-3-node-3/node.3.pdf">
+          Node - Part 3</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-node/book-a-lab01/index.html">
+          Lab-01</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-node/book-b-lab02/index.html">
+          Lab-02</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02-node/book-c-lab03/index.html">
+          Lab-03</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic03-angular/index.html">
+        3: Angular.js
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic03-angular/talk-1-angular-1/angular.1.pdf">
+          Angular - Part 1</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-angular/talk-2-angular-2/angular.2.pdf">
+          Angular - Part 2</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-angular/talk-3-angular-3/angular.3.pdf">
+          Angular - Part 3</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-angular/book-d-lab04/index.html">
+          Lab-04</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-angular/book-e-lab05/index.html">
+          Lab-05</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03-angular/book-f-heroku/index.html">
+          Deploy-to-Heroku</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <div class="ui four doubling stackable cards">
+        
+          
   <a class="ui raised link card" href="./topic01-intro/index.html">
     <div class="content">
         <div class="right floated meta"> <i class="sitemap large icon"></i></div>
@@ -105,14 +234,15 @@ figcaption
     </div>
     <div class="content">
       <div class="description">
-         <p>Web Apps have become commonplace in the past decade and the technologies used to build these Web Apps are too many to mention. This section looks at some of the general principles underpinning web app development.</p>
+         <p>Web Apps have become commonplace in the past decade and the technologies used to build these Web Apps are too many to mention (but we&#39;ll mention a few!). This section looks at some of the principles underpinning web app development, such as, the concept of Web Services, REST and general Web App motivations. We also have a brief review of JavaScript (just in case!). </p>
 
       </div>
     </div>
+    
   </a>
 
-  
-  
+        
+          
   <a class="ui raised link card" href="./topic02-node/index.html">
     <div class="content">
         <div class="right floated meta"> <i class="sitemap large icon"></i></div>
@@ -127,10 +257,11 @@ figcaption
 
       </div>
     </div>
+    
   </a>
 
-  
-  
+        
+          
   <a class="ui raised link card" href="./topic03-angular/index.html">
     <div class="content">
         <div class="right floated meta"> <i class="sitemap large icon"></i></div>
@@ -145,46 +276,19 @@ figcaption
 
       </div>
     </div>
+    
   </a>
 
-  
-  
-  <a class="ui raised link card" href="./topic05-labs/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="sitemap large icon"></i></div>
-        <div class="header">  Practical Labs </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="./topic05-labs/talk-1-labs/labs.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>To support the lecture material and give the reader an opportunity to experiment with this type of development, these labs are built around a single Case Study where the labs begin with some relatively basic functionality and steadily progress with the implementation of some of the more advanced features available.</p>
-
+        
       </div>
     </div>
-  </a>
-
-  
-
+  </div>
 </div>
 
 
-   </div>
+    <footer>
 
-   
-  <br><br>
-  <div class="ui bottom fixed borderless menu">
-    <div class="ui small item">
-    <p id="footertext">
-    Prepared by  David Drohan (ddrohan@wit.ie). Except where otherwise noted, this content is licensed under a
-     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
-     </a>
-     </p>
-    </div>
-  </div>
-
+    </footer>
     <script>
       
 $(document).ready(function()
@@ -205,10 +309,21 @@ $(document).ready(function()
   });
 
 
-})
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
 
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
 
     </script>
-
   </body>
+
  </html>

@@ -1,0 +1,306 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+      <style>
+        
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom: thin solid black;
+}
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      1: Overview
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Setup">
+      Setup
+    </a>
+    
+    <a class="item" data-tab="Webstorm">
+      Webstorm
+    </a>
+    
+    <a class="item" data-tab="NodeJS">
+      NodeJS
+    </a>
+    
+    <a class="item" data-tab="Express">
+      Express
+    </a>
+    
+    <a class="item" data-tab="MongoDB">
+      MongoDB
+    </a>
+    
+    <a class="item" data-tab="AngularJS">
+      AngularJS
+    </a>
+    
+    <a class="item" data-tab=".">
+      .
+    </a>
+    
+    <a class="item" data-tab=".">
+      .
+    </a>
+    
+    <a class="item" href="../../index.html">
+      <i class="home icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="active item" href="../../topic01-intro/book-a-lab00/index.html">
+          Setup
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-node/book-a-lab01/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-node/book-b-lab02/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-node/book-c-lab03/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-angular/book-d-lab04/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-angular/book-e-lab05/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-angular/book-f-heroku/index.html">
+          Deploy-to-Heroku
+        </a>
+      
+    
+  </div>
+  <div class="pusher">
+    <div class="ui basic segment">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Setup">
+        <p>Before you attempt any of the labs, Make sure you have the <strong>WebStorm</strong> IDE installed and configured. If you want to go &#39;old school&#39; I&#39;d recommend downloading and installing sublimetext to use as your JS editor - you can use any text editor you like, but I&#39;ll be using <strong>WebStorm</strong> for all the labs.</p>
+<p>You can visit the live site at donationweb.herokuapp.com, to get an idea of what you&#39;ll be developing throughout the labs.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Webstorm">
+        <p><img src="img/webstorm.gif" alt=""></p>
+<p>The first thing to do is go to the official JetBrains resources and get yourself an educational licensed version of their WebStorm IDE.</p>
+<p>You can find the download link <a href="https://www.jetbrains.com/webstorm/">here</a> and the Student License application form <a href="https://www.jetbrains.com/student/">here</a>.</p>
+<p>Don&#39;t forget to activate your subscription with your JetBrains account (and not an activation code or license server)</p>
+<p><img src="img/wsactivation.png" alt=""></p>
+<p>We&#39;ll look at the IDE (and its features) in detail as we work through the labs.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="NodeJS">
+        <p><img src="img/nodejs.png" alt=""></p>
+<p>Instaling <a href="https://nodejs.org">NodeJS</a> is pretty much essential for any modern web development, so if you haven&#39;t got it installed already, you can install it (and the Node Package Manager npm) <a href="https://nodejs.org">here</a>.</p>
+<p>There&#39;s also some useful info here - <a href="https://docs.npmjs.com/getting-started/installing-node">Installing Node.js and updating npm</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Express">
+        <p><img src="img/node-express.jpg" alt=""></p>
+<p>Before you install <a href="http://www.expressjs.com">express</a>, make sure you have <a href="https://docs.npmjs.com/getting-started/installing-node">node and npm</a> installed already.</p>
+<p>Go to the command line and type the following</p>
+<pre><code>npm install -g express</code></pre>
+<p>That&#39;s it - you now have express installed! (globally (-g) )</p>
+<p>It&#39;s probably worth installing the generator package as well</p>
+<pre><code>npm install -g express-generator</code></pre>
+<p>if you type</p>
+<pre><code>npm install -g express --save</code></pre>
+<p>within your project folder, it will add express to your dependencies (but we&#39;ll cover that later on).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="MongoDB">
+        <p><img src="img/mongodb.png" alt=""></p>
+<p>To install mongodb go to the official site and follow the instructions for your particular environment <a href="http://www.mongodb.org">here</a>.</p>
+<p>We won&#39;t be using a mongodb database until the last part of the module, but it&#39;s worth having it installed and setup before we actually need it.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="AngularJS">
+        <p><img src="img/angularjs.png" alt=""></p>
+<p>Visit the official Angular JS resources and set up your development environment as instructed.</p>
+<p>You can find nearly everything you need <a href="https://docs.angularjs.org/misc/contribute">here</a> but you won&#39;t need to install <a href="http://gruntjs.com/">Grunt</a> or <a href="http://bower.io/">Bower</a> for what we&#39;ll be doing in the labs (though you might need them for other modules you&#39;re taking).</p>
+<p>I&#39;d also recommend installing <a href="https://www.sourcetreeapp.com">SourceTree</a> and setting up either a <a href="http://www.bitbucket.org">bitbucket</a> (my personal favourite!) or <a href="http://www.github.com">GitHub</a> account (if you haven&#39;t got one already) to manage versioning control of all your labs.</p>
+<p>Once you have SourceTree installed, you can easily set up a local git repository and sync it up remotely with you bitbucket account as described <a href="https://confluence.atlassian.com/display/BITBUCKET/Create+a+repository">here</a>. It&#39;s probably best to set it up from the command line first and then just &#39;drag-n-drop&#39; your folder onto the SourceTree app - and you&#39;re done!</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab=".">
+        <h1> </h1>
+<p><img src="images/webdevelopment.jpg" alt=""></p>
+<h1> </h1>
+<p>This is where you can find all the labs for <strong>Dynamic Web Development</strong>.</p>
+<p>We will be covering the MEAN Software Stack which essentially covers Mongo, Express, Angular and Node when developing web applications in the context of developing a RESTful Web Service for an Android App <a href="https://www.gitbook.com/book/ddrohan/android-101-labs-as/details">Donation</a>.</p>
+<p>The labs will begin with a simple Node Web Server built using Express and progress on to a fully fledged MEAN web app, with an Angular Front End. </p>
+<p>You can check out the completed web app connected to a mongodb database hosted on <a href="http://www.mongolab.com">mongolab</a> deployed to <a href="http://www.heroku.com">heroku</a> here <a href="http://donationweb-4-0.herokuapp.com"><a href="http://donationweb-4-0.herokuapp.com">http://donationweb-4-0.herokuapp.com</a></a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab=".">
+        <h1>MEAN Setup (as at 25/06/15)</h1>
+<p><img src="img/mean-stack.jpg" alt=""></p>
+<p>This is where you can find all the info you need to setup your MEAN build environment.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        David Drohan (ddrohan@wit.ie).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <footer>
+
+    </footer>
+    <script>
+      
+$(document).ready(function()
+{
+  $("img").addClass ("ui image");
+  $('.ui.embed').embed();
+
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
