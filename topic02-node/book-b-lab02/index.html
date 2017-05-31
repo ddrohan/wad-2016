@@ -137,7 +137,7 @@ h3
     
       
         <a class="item" href="../../topic01-intro/book-a-lab00/index.html">
-          Setup
+          README
         </a>
       
     
@@ -154,25 +154,25 @@ h3
       
     
       
-        <a class="item" href="../../topic02-node/book-c-lab03/index.html">
+        <a class="item" href="../../topic03-node-mongo/book-c-lab03/index.html">
           Lab-03
         </a>
       
     
       
-        <a class="item" href="../../topic03-angular/book-d-lab04/index.html">
+        <a class="item" href="../../topic04-angular/book-d-lab04/index.html">
           Lab-04
         </a>
       
     
       
-        <a class="item" href="../../topic03-angular/book-e-lab05/index.html">
+        <a class="item" href="../../topic04-angular/book-e-lab05/index.html">
           Lab-05
         </a>
       
     
       
-        <a class="item" href="../../topic03-angular/book-f-heroku/index.html">
+        <a class="item" href="../../topic04-angular/book-f-heroku/index.html">
           Deploy-to-Heroku
         </a>
       
@@ -211,23 +211,23 @@ h3
       <div  class="ui tab segment lab" data-tab="02">
         <h1>Step 2 - Project Setup</h1>
 <p>We&#39;re going to build our first Node/Express DonationWeb project, so (assuming you already have it installed) launch your WebStorm IDE and create a new Node/Express Project as follows;</p>
-<p><img src="../lab01/images01/lab01s02.png" alt=""></p>
+<p><img src="img/lab01s02.png" alt=""></p>
 <p>Select &#39;Create New Project&#39; and you should get something like this</p>
-<p><img src="../lab01/images01/lab01s02a.png" alt=""></p>
+<p><img src="img/lab01s02a.png" alt=""></p>
 <p>Select a &#39;Node.js Express App&#39;</p>
-<p><img src="../lab01/images01/lab01s02b.png" alt=""></p>
+<p><img src="img/lab01s02b.png" alt=""></p>
 <p>and browse to the location you want to store your project files. It&#39;s probably a good idea to store all your web apps in a single folder (ssd4 for me here) and create a new folder for our specific web app <strong>donationweb-1.0</strong> (as below).</p>
-<p><img src="../lab02/images/lab02s01.png" alt=""></p>
-<p><img src="../lab02/images/lab02s02.png" alt=""></p>
+<p><img src="img/lab02s01.png" alt=""></p>
+<p><img src="img/lab02s02.png" alt=""></p>
 <p>and make sue you choose <strong>EJS</strong> again as the templating option (like before)</p>
 <p>Your project should now look like this</p>
-<p><img src="../lab02/images/lab02s03.png" alt=""></p>
+<p><img src="img/lab02s03.png" alt=""></p>
 <p>Once again, click on the &#39;play&#39; button to run/launch your Web App..</p>
 <p>if you&#39;ve followed all the steps correctly you should be able to run your app (or visit <a href="http://localhost:3000"><a href="http://localhost:3000">http://localhost:3000</a></a>) and see the following</p>
-<p><img src="../lab01/images01/lab01s12.png" alt=""></p>
+<p><img src="img/lab01s12.png" alt=""></p>
 <p>Now, if you&#39;d rather your browser launch automatically you can configure you &#39;Run&#39; options and choose the Browser you prefer</p>
 <p>Just be sure to &#39;tick&#39; the &#39;After Launch&#39; check box</p>
-<p><img src="../lab02/images/lab02config.png" alt=""></p>
+<p><img src="img/lab02config.png" alt=""></p>
 <p>Close the browser tab/window and run your app again, to confirm your new run configuration is correct.</p>
 <p>The next few steps will involve implementing some of our RESTful APi and some WebStorm configuration changes.</p>
 
@@ -236,22 +236,22 @@ h3
       <div  class="ui tab segment lab" data-tab="03">
         <h1>Step 3 - Creating our &#39;Model&#39;</h1>
 <p>Before we can think about accessing data on our Server via a RESTful APi, we first need the actual data :) , so this step will involve creating a list of &#39;Donations&#39; that we can &#39;expose&#39; via our APi.</p>
-<p>The first thing we need to do is create a new directory in our root directory called <strong><em>models/</em></strong> </p>
-<p><img src="../lab02/images/lab02s05.png" alt=""></p>
-<p><img src="../lab02/images/lab02s06.png" alt=""></p>
+<p>The first thing we need to do is create a new directory in our root directory called <strong><em>models/</em></strong></p>
+<p><img src="img/lab02s05.png" alt=""></p>
+<p><img src="img/lab02s06.png" alt=""></p>
 <p>and within that directory create a new file called <strong>donations.js</strong>.</p>
-<p><img src="../lab02/images/lab02s07.png" alt=""></p>
-<p><img src="../lab02/images/lab02s08.png" alt=""></p>
+<p><img src="img/lab02s07.png" alt=""></p>
+<p><img src="img/lab02s08.png" alt=""></p>
 <p>Now, paste the following code into your newly created .js file</p>
 <pre><code class="lang-javascript">var donations = [
-                 {id: 1000000, paymenttype: &#39;PayPal&#39;, amount: 1600, upvotes: 1}, 
+                 {id: 1000000, paymenttype: &#39;PayPal&#39;, amount: 1600, upvotes: 1},
                  {id: 1000001, paymenttype: &#39;Direct&#39;, amount: 1100, upvotes: 2}
                 ];
 
 module.exports = donations;</code></pre>
 <p>Notice the field (id) in our model, this will be useful later on for deleting etc.</p>
 <p>Your project should now look something like this</p>
-<p><img src="../lab02/images/lab02s09.png" alt=""></p>
+<p><img src="img/lab02s09.png" alt=""></p>
 
       </div>
      
@@ -276,9 +276,9 @@ module.exports = donations;</code></pre>
 <hr>
 <p>Before we proceed, WebStorm has a very nice (and useful!) feature to assist the developer in writing javascript - <strong>Code Assistance</strong>, which happens to disabled by default, so we need to turn it on, as follows;</p>
 <p>File-&gt;Default Settings</p>
-<p><img src="../lab02/images/lab02s10.png" alt=""></p>
+<p><img src="img/lab02s10.png" alt=""></p>
 <p>Languages &amp; Frameworks-&gt;Node.js &amp; NPM</p>
-<p><img src="../lab02/images/lab02s11.png" alt=""></p>
+<p><img src="img/lab02s11.png" alt=""></p>
 <p><strong>Enable </strong> Node.js Core Library</p>
 <p><img src="../lab02/images/lab02s12.png" alt=""></p>
 <hr>
@@ -301,31 +301,31 @@ module.exports = router;</code></pre>
 <p>to add the actual <strong><em>GET</em></strong> APi route.</p>
 <p>Now, try and run your app and see what happens....</p>
 <p>You probably got something like this</p>
-<p><img src="../lab02/images/lab02s13.png" alt=""></p>
+<p><img src="img/lab02s13.png" alt=""></p>
 <p>We&#39;re trying to call a function &#39;findAll&#39; on an object (donations) that the js interpreter can&#39;t find.</p>
-<p><img src="../lab02/images/lab02s14.png" alt=""></p>
+<p><img src="img/lab02s14.png" alt=""></p>
 <p>Ordinarily, we&#39;d have to manually add in the javascript we need, but we can get WebStorm to do this for us - highlight the error and hit Alt+Enter (on a Mac) and you get the following;</p>
-<p><img src="../lab02/images/lab02s15.png" alt=""></p>
+<p><img src="img/lab02s15.png" alt=""></p>
 <p>Choose the first &#39;fix&#39; and the necessary &#39;requires&#39; statement is added to our js file - kinda handy don&#39;t you think?!</p>
-<p><img src="../lab02/images/lab02s16.png" alt=""></p>
+<p><img src="img/lab02s16.png" alt=""></p>
 <p>Now, to actually test our APi we need to launch our Server again and point the browser at <a href="http://localhost:3000/donations"><a href="http://localhost:3000/donations">http://localhost:3000/donations</a></a> and we should get back a json string of our data, like so.</p>
-<p><img src="../lab02/images/lab02s22.png" alt=""></p>
+<p><img src="img/lab02s22.png" alt=""></p>
 <p>Over time, this would probably become a bit time consuming, but WebStorm to the rescue again :) there&#39;s a feature to <strong>Test RESTful Web Service</strong>, so launch that like so</p>
-<p><img src="../lab02/images/lab02s17.png" alt=""></p>
+<p><img src="img/lab02s17.png" alt=""></p>
 <p>and you get the <strong>REST Client</strong> window, so select/type in the following for out test request</p>
 <ul>
 <li>HTTP Method <strong>GET</strong></li>
 <li>Host/port <strong><a href="http://localhost:3000">http://localhost:3000</a></strong></li>
 <li>Path <strong>/donations</strong></li>
 </ul>
-<p><img src="../lab02/images/lab02s18.png" alt=""></p>
+<p><img src="img/lab02s18.png" alt=""></p>
 <p>On the &#39;Request&#39; tab, update the &#39;Accept&#39; Header <strong>application/json</strong></p>
-<p><img src="../lab02/images/lab02s20.png" alt=""></p>
+<p><img src="img/lab02s20.png" alt=""></p>
 <p>and &#39;play&#39; the request</p>
-<p><img src="../lab02/images/lab02s23.png" alt=""></p>
-<p><img src="../lab02/images/lab02s23a.png" alt=""></p>
+<p><img src="img/lab02s23.png" alt=""></p>
+<p><img src="img/lab02s23a.png" alt=""></p>
 <p>If everything goes according to plan, you&#39;ll see the same json list of donations in the <strong>Response</strong>.</p>
-<p><img src="../lab02/images/lab02s19.png" alt=""></p>
+<p><img src="img/lab02s19.png" alt=""></p>
 <p>You could continue to use the browser to test the APi, but things will get a bit tricky when we want to test our add &amp; update requests so we&#39;ll stick with the REST Client for the moment.</p>
 <hr>
 <h2>Creating Our Second Route - &#39;findOne&#39;</h2>
@@ -355,12 +355,12 @@ module.exports = router;</code></pre>
 <h3>The Request</h3>
 <p>GETing donation with id &#39;1000001&#39;</p>
 <pre><code class="lang-html">/donations/1000001</code></pre>
-<p><img src="../lab02/images/lab02s24.png" alt=""></p>
+<p><img src="img/lab02s24.png" alt=""></p>
 <h3>The Response</h3>
-<p><img src="../lab02/images/lab02s25.png" alt=""></p>
+<p><img src="img/lab02s25.png" alt=""></p>
 <p>requesting donation with id &#39;10000011&#39;</p>
 <pre><code class="lang-html">/donations/10000011</code></pre>
-<p><img src="../lab02/images/lab02s26.png" alt=""></p>
+<p><img src="img/lab02s26.png" alt=""></p>
 <hr>
 
       </div>
@@ -372,14 +372,14 @@ module.exports = router;</code></pre>
 <h3>1. Find your IP address</h3>
 <p>run <strong><em>ipconfig</em></strong> (windows) or <strong><em>ifconfig</em></strong> (mac) to get your machines IP address.</p>
 <h3>2. Update your Host URL in Android REST APi</h3>
-<p><img src="../lab02/images/lab02android00.png" alt=""></p>
+<p><img src="img/lab02android00.png" alt=""></p>
 <h3>3. Test your Android App</h3>
 <p><strong>Initially Launch of App (Total is $2700, from Node Web APi)</strong></p>
-<p><img src="../lab02/images/lab02android03.png" alt=""></p>
+<p><img src="img/lab02android03.png" alt=""></p>
 <p><strong>List all our Donations in the Report</strong></p>
-<p><img src="../lab02/images/lab02android01.png" alt=""></p>
+<p><img src="img/lab02android01.png" alt=""></p>
 <p><strong>Upvote a Donation (using the WebStorm REST Client) and Refresh Report</strong></p>
-<p><img src="../lab02/images/lab02android02.png" alt=""></p>
+<p><img src="img/lab02android02.png" alt=""></p>
 
       </div>
      
@@ -500,7 +500,7 @@ module.exports = router;</code></pre>
       <div  class="ui tab segment lab" data-tab="Solution">
         <h1>Solution - Lab 2</h1>
 <p>You can find the solution to this lab <strong><a href="../zips/donationweb-1.0.zip">here</a></strong> and your project should look something like this</p>
-<p><img src="../lab02/images/lab02project.png" alt=""></p>
+<p><img src="img/lab02project.png" alt=""></p>
 
       </div>
      
