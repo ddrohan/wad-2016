@@ -118,10 +118,6 @@ h3
       Solution
     </a>
     
-    <a class="item" data-tab=".">
-      .
-    </a>
-    
     <a class="item" href="../../index.html">
       <i class="home icon"></i>
     </a>
@@ -187,13 +183,13 @@ h3
      
       <div  class="ui tab segment lab" data-tab="01">
         <h1>Objectives</h1>
-<p>In this Lab, you will be required to build the next version of our Donation Case Study Web App, called <strong>DonationWeb 4.0</strong>.  We will build on the previous lab, so you can either use your own version of <strong>DonationWeb 3.0</strong> or download the starter code <strong><a href="../zips/donationweb-3.0.zip">here</a></strong>. In this version we will be updating our <strong>controllers</strong> and our <strong>factory</strong> to introduce some functionality into our Web App.  </p>
+<p>In this Lab, you will be required to build the next version of our Donation Case Study Web App, called <strong>DonationWeb 4.0</strong>.  We will build on the previous lab, so you can either use your own version of <strong>DonationWeb 3.0</strong> or download the starter code <strong><a href="archives/donationweb-3.0.zip">here</a></strong>. In this version we will be updating our <strong>controllers</strong> and our <strong>factory</strong> to introduce some functionality into our Web App.  </p>
 <p>On completion of this lab you&#39;ll be able to</p>
 <ul>
-<li>list all donations </li>
+<li>list all donations</li>
 <li>add and delete a single donation</li>
 <li>be able to use <strong>callbacks</strong></li>
-<li>be able to use <strong>templates</strong> </li>
+<li>be able to use <strong>templates</strong></li>
 <li>be able to use the <strong>ng-view</strong>, <strong>ng-model</strong>, <strong>ng-repeat</strong> (and a few other) directives</li>
 </ul>
 
@@ -201,15 +197,15 @@ h3
      
       <div  class="ui tab segment lab" data-tab="02">
         <h1>Step 2 - Setup</h1>
-<p>First thing you should do is download the starter code (or the solution to the previous lab) <strong><a href="../zips/donationweb-3.0.zip">here</a></strong> and then extract it to your single parent folder for all your web app projects you created for the previous labs. </p>
+<p>First thing you should do is download the starter code (or the solution to the previous lab) <strong><a href="../zips/donationweb-3.0.zip">here</a></strong> and then extract it to your single parent folder for all your web app projects you created for the previous labs.</p>
 <p>It&#39;s not vital, but you should probably rename the extracted folder for your final version of DonationWeb.</p>
 <p>Before beginning any refactoring it&#39;s probably worth running the Web App, just to confirm it launches correctly and we see the expected navigation bar (as below).</p>
 <h2>Navigation Bar</h2>
 <p>Our Nav bar now has 5 links, and 2 buttons, like so</p>
-<p><img src="../images/navbar.lab1.v3.png" alt=""></p>
+<p><img src="img/navbar.lab1.v3.png" alt=""></p>
 <p>So the rest of the lab involves adding functionality to allow the user to</p>
 <ul>
-<li><strong>Donate</strong> </li>
+<li><strong>Donate</strong></li>
 <li><strong>View All Donations</strong> and</li>
 <li><strong>Delete a Donation </strong></li>
 </ul>
@@ -220,13 +216,13 @@ h3
         <h1>Step 3 - &#39;View All Donations&#39;</h1>
 <p>With any application that will be listing some data it&#39;s always a good idea to get the &#39;Display/list/View All&#39; option implemented first, if for no other reason, to confirm that what you have in the &#39;app&#39; can be viewed in the &#39;app&#39; and that you can confirm your &#39;add&#39; works pretty much instantly.</p>
 <p>So the first feature we&#39;ll implement is our <strong>&#39;View All Donations&#39;</strong> and list our &#39;donations&#39; we have stored on the Server (in the mongodb database). Before we start, have a look again at what we want our completed page to look like (or something similar).</p>
-<p><img src="../images/donationwebapp1.jpg" alt=""></p>
+<p><img src="img/donationwebapp1.jpg" alt=""></p>
 <p>We want to initially display the records (just so we know it works) on our page in the format above and also be able to delete the record (and eventually edit it). To achieve this we need to refactor our <strong>&#39;donationsController&#39;</strong> and <strong><em>request</em></strong> the list from the server - so let&#39;s do that.</p>
 <hr>
 <h2><strong><em>&#39;Requesting&#39;</em></strong> our List of Donations</h2>
 <p>Have a quick look again at your <strong>&#39;donationsController&#39;</strong>, just to familiarise yourself with the <strong>$scope</strong> object you&#39;ll be working with.</p>
 <p>Now, we need to somehow allow our &#39;donationsController&#39; make requests so that we can display it on our donations page. We can achieve this through <strong><em>Dependency Injection</em></strong> so to begin with, add the <strong>$http</strong> dependency to your existing controller like so</p>
-<p><img src="../images/lab05.step3.1.png" alt=""></p>
+<p><img src="img/lab05.step3.1.png" alt=""></p>
 <p>and the following http call (within a <strong><em>findAll</em></strong> function)</p>
 <pre><code class="lang-javascript">function findAll() {
         $http.get(&#39;/donations&#39;)
@@ -240,11 +236,11 @@ h3
     };</code></pre>
 <p>Be clear about what is happening here and how we use the <strong><em>$scope</em></strong> object to allow access in our <strong><em>view</em></strong> (our donations.ejs).</p>
 <p>Your completed <strong>donationsController</strong> should now look something like this</p>
-<p><img src="../images/lab05.step3.2.png" alt=""></p>
+<p><img src="img/lab05.step3.2.png" alt=""></p>
 <hr>
 <h2>Displaying our &#39;List of Donations&#39;</h2>
 <p>Everything we need to display our list of donations is already implemented in our <strong>&#39;donations.ejs&#39;</strong> page (as per the solution) so test it out, but you should investigate how we actually achieve the rendering of the list and familarise yourself with the different <strong><em>angular directives</em></strong> used in the solution, below is an extract from the page but it&#39;s worth having a look at the complete html at some stage.</p>
-<p><img src="../images/lab2.step3.2.png" alt=""></p>
+<p><img src="img/lab2.step3.2.png" alt=""></p>
 <p>You should pay particular attention to the following directives</p>
 <ul>
 <li><strong>ng-controller</strong></li>
@@ -252,22 +248,22 @@ h3
 <li><strong>ng-click</strong></li>
 </ul>
 <p>and how we display the individual properties of each donation via the current <strong><em>scope</em></strong>.</p>
-<p>And as we&#39;re using </p>
+<p>And as we&#39;re using</p>
 <pre><code class="lang-javascript">                console.log(data);</code></pre>
 <p>As a final test it&#39;s worth opening the Developer Console (will be different depending on which browser you&#39;re using) and view &#39;console&#39; output for example....</p>
-<p><img src="../images/lab05.step3.3.png" alt=""></p>
+<p><img src="img/lab05.step3.3.png" alt=""></p>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="04">
         <h1>Step 4 - &#39;Donate&#39;</h1>
 <p>So now that we can display a list of the donations currently on the server, the second feature we&#39;ll implement is our <strong>&#39;Donate&#39;</strong> option where the user can choose an <em>amount</em> and a <em>payment type</em>. Before we start, have a look again at what we want our completed page to look like</p>
-<p><img src="../images/donationwebapp2.jpg" alt=""></p>
+<p><img src="img/donationwebapp2.jpg" alt=""></p>
 <p>There&#39;s a bit more work involved to get this feature implemented, so the first thing we&#39;ll do is write a function to allow us to <em>add</em> a donation to our list (stored on the server).</p>
 <hr>
 <h2><strong><em>&#39;Posting&#39;</em></strong> a single Donation</h2>
 <p>Open up your <strong>donateController</strong> and <em>inject</em> the necessary dependencies so that your controller looks like the following</p>
-<p><img src="../images/lab05.step3.4.png" alt=""></p>
+<p><img src="img/lab05.step3.4.png" alt=""></p>
 <p>Now we need to implement a function which will &#39;add&#39; (or post) a donation made, to the server. Here&#39;s the majority of the code you need, but try and work out what you need to complete the function (fill in the [...]&#39;s) and where to put it.</p>
 <pre><code class="lang-javascript">$scope.addDonation = function(){
         $scope.[...] = ...;
@@ -284,8 +280,8 @@ h3
 <p>The next step is to somehow &#39;wire up&#39; the click of the Donate Button on our view, with the add function you just implemented - we&#39;ll achieve this through a <strong><em>callback function</em></strong>.</p>
 <hr>
 <h2>Updating our <em>donateController</em> - the &#39;addDonation&#39; Callback</h2>
-<p>Firstly, have a look at our existing donate.ejs page, and specifically our form </p>
-<p><img src="../images/lab2.step4.1.png" alt=""></p>
+<p>Firstly, have a look at our existing donate.ejs page, and specifically our form</p>
+<p><img src="img/lab2.step4.1.png" alt=""></p>
 <p>what function gets triggered when the Donate Button is clicked (when the form is submitted)?</p>
 <p>Also, what form <strong>data</strong> is submitted (look for the <strong>ng-model</strong> directives)?</p>
 <p>This is the information you need to write the callback function within the controller.</p>
@@ -298,14 +294,14 @@ h3
       <div  class="ui tab segment lab" data-tab="05">
         <h1>Step 5 - &#39;Delete&#39; and &#39;UpVotes&#39;</h1>
 <p>Now that we can display a list of our donations and add an individual donation, the final features we need implement (at this stage anyway) is our <strong>&#39;Delete&#39;</strong> option where the user can <em>Remove</em> a single donation and also give a donation the <em>thumbs Up</em> or increase its <strong>UpVotes</strong>. Before we continue, firstly, here&#39;s the solution to the previous step, and what your <strong>donateController</strong> should look like;</p>
-<p><img src="../images/lab05.step3.5.png" alt=""></p>
+<p><img src="img/lab05.step3.5.png" alt=""></p>
 <p>And secondly, have a look again at what our donations page looks like</p>
-<p><img src="../images/donationwebapp1.jpg" alt=""></p>
+<p><img src="img/donationwebapp1.jpg" alt=""></p>
 <p>What we need to do here is write 2 functions, one called <strong>delete</strong> to <em>delete</em> a donation and another called <strong>incrementUpvotes</strong> to increase its <em>upvotes</em> property - both of which need to be added to our <strong>donationsController</strong>.</p>
 <hr>
 <h2>Updating our <em>donationsController</em> - the &#39;deleteDonation&#39; Callback</h2>
 <p>Firstly, have a look at our existing donations.ejs page, and specifically the <strong>ng-click</strong> directives associated with the delete button and the &#39;thumbs Up&#39; glyphicon.</p>
-<p><img src="../images/lab05.step3.6.png" alt=""></p>
+<p><img src="img/lab05.step3.6.png" alt=""></p>
 <p>These are the functions you need to write within the donations controller.</p>
 <p>To help you along, you need to add the following function to the controller - which you need to complete.</p>
 <pre><code class="lang-javascript">  $scope.delete = function(id) {
@@ -325,19 +321,15 @@ h3
 <p><strong>Observe what happens when you click on the thumb icon.... and more importantly how does it work</strong></p>
 <hr>
 <p>As a wrap up, your completed <strong>controller</strong> should look like this</p>
-<p><img src="../images/lab05.step3.7.png" alt=""></p>
+<p><img src="img/lab05.step3.7.png" alt=""></p>
 <h2>Well Done!!</h2>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="Solution">
         <h1>Solution - Lab 5</h1>
-<p>You can find the solution to this lab <strong><a href="../zips/donationweb-4.0.zip">here</a></strong>.</p>
+<p>You can find the solution to this lab <strong><a href="archives/donationweb-4.0.zip">here</a></strong>.</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab=".">
-        
       </div>
      
     </div>
