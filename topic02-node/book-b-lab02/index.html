@@ -184,7 +184,7 @@ h3
       
       <div  class="ui tab segment lab" data-tab="Lab-02">
         <h1>Lab 2 - DonationWeb 1.0 (Express &amp; Node App)</h1>
-<p>In this lab we will be using our WebStorm IDE to build a simple Node/Express Server to initally act as a Web Service APi for a related Android Mobile App, and eventually it will be our back-end to a full MEAN Stack Web App.</p>
+<p>In this lab we will be using our WebStorm IDE to build a simple Node/Express Server to initially act as a Web Service APi for a related Android Mobile App, and eventually it will be our back-end to a full MEAN Stack Web App.</p>
 
       </div>
      
@@ -212,7 +212,7 @@ h3
         <h1>Step 2 - Project Setup</h1>
 <p>We&#39;re going to build our first Node/Express DonationWeb project, so (assuming you already have it installed) launch your WebStorm IDE and create a new Node/Express Project as follows;</p>
 <p><img src="img/lab01s02.png" alt=""></p>
-<p>Select &#39;Create New Project&#39; and you should get something like this</p>
+<p>Select &#39;Create New Project&#39; and you should get something like this:</p>
 <p><img src="img/lab01s02a.png" alt=""></p>
 <p>Select a &#39;Node.js Express App&#39;</p>
 <p><img src="img/lab01s02b.png" alt=""></p>
@@ -400,7 +400,7 @@ module.exports = router;</code></pre>
 <li>PUT <strong>/donations/:id/upvote</strong> - upvote a donation, notice we use the donation ID in the URL</li>
 <li>DELETE <strong>/donations/:id</strong> - delete a donation by ID</li>
 </ul>
-<p>We&#39;ve already implemented the first two, so now let&#39;s have a go at </p>
+<p>We&#39;ve already implemented the first two, so now let&#39;s have a go at</p>
 <ul>
 <li>Adding a new donation</li>
 <li>Deleting a donation and</li>
@@ -432,16 +432,16 @@ module.exports = router;</code></pre>
 <h3>Testing Our &#39;Add&#39; Route</h3>
 <p>Now that we have a POST &#39;service&#39; in our RESTful APi, let&#39;s test it via our REST Client.</p>
 <h3>The Request</h3>
-<p><img src="../lab02/images/lab02s27.png" alt=""></p>
+<p><img src="img/lab02s27.png" alt=""></p>
 <p>We need to fill in the <strong>Request Body</strong> for our POST</p>
-<p><img src="../lab02/images/lab02s28.png" alt=""></p>
+<p><img src="img/lab02s28.png" alt=""></p>
 <p>POSTing donation data in JSON format</p>
 <pre><code class="lang-json">{&quot;id&quot;:0,&quot;paymenttype&quot;:&quot;Direct&quot;,&quot;amount&quot;:500,&quot;upvotes&quot;:0}</code></pre>
-<p><img src="../lab02/images/lab02s29.png" alt=""></p>
+<p><img src="img/lab02s29.png" alt=""></p>
 <h3>The Response</h3>
-<p><img src="../lab02/images/lab02s30.png" alt=""></p>
+<p><img src="img/lab02s30.png" alt=""></p>
 <p>GET all donations again to confirm</p>
-<p><img src="../lab02/images/lab02s31.png" alt=""></p>
+<p><img src="img/lab02s31.png" alt=""></p>
 <hr>
 <h2>Creating Our &#39;Upvote&#39; Route - &#39;incrementVotes&#39;</h2>
 <p>Here&#39;s what we need to implement the &#39;Upvote&#39; route</p>
@@ -459,9 +459,9 @@ module.exports = router;</code></pre>
 <h3>The Request</h3>
 <p>UPDATEing donation votes with id &#39;941345&#39;</p>
 <pre><code class="lang-html">/donations/941345/votes</code></pre>
-<p><img src="../lab02/images/lab02s35.png" alt=""></p>
+<p><img src="img/lab02s35.png" alt=""></p>
 <h3>The Response</h3>
-<p><img src="../lab02/images/lab02s36.png" alt=""></p>
+<p><img src="img/lab02s36.png" alt=""></p>
 <hr>
 <h2>Creating Our &#39;Delete&#39; Route - &#39;deleteDonation&#39;</h2>
 <p>Again, we start with the function in our <strong>routes/donations.js</strong> file</p>
@@ -487,11 +487,11 @@ module.exports = router;</code></pre>
 <h3>The Request</h3>
 <p>DELETEing donation with id &#39;1000001&#39;</p>
 <pre><code class="lang-html">/donations/1000001</code></pre>
-<p><img src="../lab02/images/lab02s32.png" alt=""></p>
+<p><img src="img/lab02s32.png" alt=""></p>
 <h3>The Response</h3>
-<p><img src="../lab02/images/lab02s33.png" alt=""></p>
+<p><img src="img/lab02s33.png" alt=""></p>
 <p>A quick GET all to confirm</p>
-<p><img src="../lab02/images/lab02s34.png" alt=""></p>
+<p><img src="img/lab02s34.png" alt=""></p>
 <hr>
 <h1>All Done!</h1>
 
