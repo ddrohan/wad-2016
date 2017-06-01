@@ -191,10 +191,10 @@ h3
      
       <div  class="ui tab segment lab" data-tab="01">
         <h1>Objectives</h1>
-<p>In this Lab, you will be required to build the next version of our Donation Case Study Web App, called <strong>DonationWeb 2.0</strong>.  We will build on the previous lab, so you can either use your own version of <strong>DonationWeb 1.0</strong> or download the starter code <strong><a href="../zips/donationweb-1.0.zip">here</a></strong>. In this version we will be implementing a <strong><em>MongoDB</em></strong> backend (and reusing our previous solution).  </p>
+<p>In this Lab, you will be required to build the next version of our Donation Case Study Web App, called <strong>DonationWeb 2.0</strong>.  We will build on the previous lab, so you can either use your own version of <strong>DonationWeb 1.0</strong> or download the starter code <strong><a href="archives/donationweb-1.0.zip">here</a></strong>. In this version we will be implementing a <strong><em>MongoDB</em></strong> backend (and reusing our previous solution).  </p>
 <p>On completion of this lab you&#39;ll be able to</p>
 <ul>
-<li>create a <strong>NodeJS</strong> web app using <strong>express</strong> </li>
+<li>create a <strong>NodeJS</strong> web app using <strong>express</strong></li>
 <li>run this app as a <strong>NodeJS Server</strong> and process client requests</li>
 <li>be able to use <strong>npm</strong> to install dependency modules</li>
 </ul>
@@ -207,42 +207,42 @@ h3
      
       <div  class="ui tab segment lab" data-tab="02">
         <h1>Step 2 - Setup</h1>
-<p>First thing you should do is download the starter code (or the solution to the previous lab) <strong><a href="../zips/donationweb-1.0.zip">here</a></strong> and then extract it to your single parent folder for all your web app projects you created for previous labs. </p>
+<p>First thing you should do is download the starter code (or the solution to the previous lab) <strong><a href="../zips/donationweb-1.0.zip">here</a></strong> and then extract it to your single parent folder for all your web app projects you created for previous labs.</p>
 <p>Rename the extracted folder, (or copy your own version) to <strong>donationweb-2.0</strong></p>
-<p>Open your <strong>donationweb-2.0</strong> web app (in WebStorm) </p>
-<p><img src="../lab03/images/lab02s213.png" alt=""></p>
+<p>Open your <strong>donationweb-2.0</strong> web app (in WebStorm)</p>
+<p><img src="img/lab02s213.png" alt=""></p>
 <p>and then change your &#39;title&#39; like so</p>
-<p><img src="../lab03/images/lab02s214.png" alt=""></p>
+<p><img src="img/lab02s214.png" alt=""></p>
 <p>and launch it.</p>
 <p>You may not get any errors, but you should probably reconfigure your project (as it&#39;s a copy) and fix the <strong>node modules</strong> path as follows:</p>
 <p>Open your preferences and navigate to the <strong>Library</strong> settings</p>
-<p><img src="../lab03/images/lab02s211.png" alt=""></p>
+<p><img src="img/lab02s211.png" alt=""></p>
 <p>and</p>
 <p>update your <strong>node_modules</strong> path to point to the current project</p>
-<p><img src="../lab03/images/lab02s212.png" alt=""></p>
+<p><img src="img/lab02s212.png" alt=""></p>
 <p>Launch it again, if everything goes to plan you should be able to visit <a href="http://localhost:3000"><a href="http://localhost:3000">http://localhost:3000</a></a> and you should see the following</p>
-<p><img src="../lab03/images/lab02s215.png" alt=""></p>
-<p>The next thing to do is to add the <strong>mongodb</strong> and <strong>mongoose</strong> module dependencies to our project. Launch the terminal window </p>
-<p><img src="../lab03/images/lab02s216.png" alt=""></p>
+<p><img src="img/lab02s215.png" alt=""></p>
+<p>The next thing to do is to add the <strong>mongodb</strong> and <strong>mongoose</strong> module dependencies to our project. Launch the terminal window</p>
+<p><img src="img/lab02s216.png" alt=""></p>
 <p>and run the following commands</p>
 <pre><code>npm install mongoose</code></pre>
 <p>and</p>
 <pre><code>npm install mongodb</code></pre>
 <p>Your project should now look like this</p>
-<p><img src="../lab03/images/lab02s217.png" alt=""></p>
+<p><img src="img/lab02s217.png" alt=""></p>
 <p>The last step in our &#39;Setup&#39; is to kick off our localhost mongodb server and insert a few &#39;Donations&#39; so we can test our refactored &#39;findAll&#39; function (next step).</p>
 <p>Open up a terminal window and launch the mongodb server</p>
-<p><img src="../lab03/images/lab02s201.png" alt=""></p>
+<p><img src="img/lab02s201.png" alt=""></p>
 <p>Open another, separate window and launch the client</p>
-<p><img src="../lab03/images/lab02s202.png" alt=""></p>
+<p><img src="img/lab02s202.png" alt=""></p>
 <p>In the client window, create/switch to the &#39;donationsdb&#39; database</p>
-<p><img src="../lab03/images/lab02s203.png" alt=""></p>
+<p><img src="img/lab02s203.png" alt=""></p>
 <p>Insert a few records and make sure you name your collection <strong>donations</strong> and <strong>NOT</strong> donationsdb, (as in the screenshots), so you&#39;ll be saying something like</p>
 <pre><code>db.donations.find()</code></pre>
 <p>etc. etc.</p>
-<p><img src="../lab03/images/lab02s204.png" alt=""></p>
+<p><img src="img/lab02s204.png" alt=""></p>
 <p>&#39;Find&#39; all the donations, just to confirm they exist.</p>
-<p><img src="../lab03/images/lab02s205.png" alt=""></p>
+<p><img src="img/lab02s205.png" alt=""></p>
 <p>We now have a few records or &#39;documents&#39; we can access via our Node Web Server (next step).</p>
 
       </div>
@@ -255,7 +255,7 @@ h3
 <p>and to run a mongo client</p>
 <pre><code>mongo</code></pre>
 <p>We connect to our local MongoDB instance by adding the following code into our donations.js <strong>routes</strong> file:</p>
-<pre><code class="lang-javascript">var mongoose = require(&#39;mongoose&#39;); 
+<pre><code class="lang-javascript">var mongoose = require(&#39;mongoose&#39;);
 
 ...
 
@@ -287,7 +287,7 @@ module.exports = mongoose.model(&#39;Donation&#39;, DonationSchema);</code></pre
 <p>Next we register that model with the global mongoose object we imported using require() so that it can be used to interact with the database anywhere else mongoose is imported.</p>
 <p><strong>It is strongly recommended to run your web server at this point, to ensure everything is configured correctly and before we go ahead an modify our routes to interact with the database.</strong></p>
 <p>So as before, go ahead and fire up the server - but make sure your mongodb is running first, and you get the <strong>&#39;connected to database&#39;</strong> message at the console.</p>
-<p><img src="../lab03/images/lab02s218.png" alt=""></p>
+<p><img src="img/lab02s218.png" alt=""></p>
 
       </div>
      
@@ -317,9 +317,9 @@ module.exports = mongoose.model(&#39;Donation&#39;, DonationSchema);</code></pre
 <h3>The Request</h3>
 <p>GETing all the donations in our mongodb database</p>
 <pre><code class="lang-html">/donations</code></pre>
-<p><img src="../lab03/images/lab03s401.png" alt=""></p>
+<p><img src="img/lab03s401.png" alt=""></p>
 <h3>The Response</h3>
-<p><img src="../lab03/images/lab03s402.png" alt=""></p>
+<p><img src="img/lab03s402.png" alt=""></p>
 <hr>
 <h2>Modifying Our Second Route - &#39;findOne&#39;</h2>
 <p>Our first route returned all the donations to a client, but what if the client only want&#39;s to get at a single donation from the database - that&#39;s what our next route &#39;findOne&#39; does, so we need to refactor our current implementation to make use of mongoose.</p>
@@ -339,12 +339,12 @@ module.exports = mongoose.model(&#39;Donation&#39;, DonationSchema);</code></pre
 <h3>The Request</h3>
 <p>GETing donation with id &#39;566594b787282d5d60eedc23&#39;</p>
 <pre><code class="lang-html">/donations/566594b787282d5d60eedc23</code></pre>
-<p><img src="../lab03/images/lab03s403.png" alt=""></p>
+<p><img src="img/lab03s403.png" alt=""></p>
 <h3>The Response</h3>
-<p><img src="../lab03/images/lab03s403a.png" alt=""></p>
+<p><img src="img/lab03s403a.png" alt=""></p>
 <p>requesting donation with id &#39;566594b787282d5d60eedc<strong>233</strong>&#39;</p>
 <pre><code class="lang-html">/donations/566594b787282d5d60eedc233</code></pre>
-<p><img src="../lab03/images/lab03s404.png" alt=""></p>
+<p><img src="img/lab03s404.png" alt=""></p>
 <hr>
 
       </div>
@@ -377,16 +377,16 @@ module.exports = mongoose.model(&#39;Donation&#39;, DonationSchema);</code></pre
 <hr>
 <h3>Testing Our &#39;Add&#39; Route</h3>
 <h3>The Request</h3>
-<p><img src="../lab02/images/lab02s27.png" alt=""></p>
+<p><img src="img/lab02s27.png" alt=""></p>
 <p>We need to fill in the <strong>Request Body</strong> for our POST</p>
-<p><img src="../lab02/images/lab02s28.png" alt=""></p>
+<p><img src="img/lab02s28.png" alt=""></p>
 <p>POSTing donation data in JSON format</p>
 <pre><code class="lang-json">{ &quot;paymenttype&quot;:&quot;Direct&quot;,&quot;amount&quot;:500 }</code></pre>
-<p><img src="../lab03/images/lab02s501.png" alt=""></p>
+<p><img src="img/lab02s501.png" alt=""></p>
 <h3>The Response</h3>
-<p><img src="../lab03/images/lab02s502.png" alt=""></p>
+<p><img src="img/lab02s502.png" alt=""></p>
 <p>GET all donations again to confirm</p>
-<p><img src="../lab03/images/lab02s503.png" alt=""></p>
+<p><img src="img/lab02s503.png" alt=""></p>
 <hr>
 <h2>Modifying Our Fourth Route - &#39;Delete a Donation&#39;</h2>
 <p>Edit your <strong>routes/donations.js</strong> file and navigate to your existing &#39;deleteDonation&#39; function.</p>
@@ -406,11 +406,11 @@ module.exports = mongoose.model(&#39;Donation&#39;, DonationSchema);</code></pre
 <p>DELETEing donation with id &#39;566594b787282d5d60eedc23&#39;</p>
 <pre><code class="lang-html">/donations/566594b787282d5d60eedc23</code></pre>
 <h3>The Request</h3>
-<p><img src="../lab03/images/lab02s504.png" alt=""></p>
+<p><img src="img/lab02s504.png" alt=""></p>
 <h3>The Response</h3>
-<p><img src="../lab03/images/lab02s505.png" alt=""></p>
+<p><img src="img/lab02s505.png" alt=""></p>
 <p>GET all donations again to confirm</p>
-<p><img src="../lab03/images/lab02s506.png" alt=""></p>
+<p><img src="img/lab02s506.png" alt=""></p>
 <hr>
 <h2>Modifying Our Fifth (and final) Route - &#39;Increment Votes&#39;</h2>
 <p>Again, edit your <strong>routes/donations.js</strong> file and navigate to your existing &#39;incrementVotes&#39; function.</p>
@@ -438,14 +438,14 @@ module.exports = mongoose.model(&#39;Donation&#39;, DonationSchema);</code></pre
 <p>PUTing (or updating) donation with id &#39;566593d087282d5d60eedc22&#39;</p>
 <pre><code class="lang-html">/donations/566593d087282d5d60eedc22/votes</code></pre>
 <h3>The Request</h3>
-<p><img src="../lab03/images/lab02s507.png" alt=""></p>
+<p><img src="img/lab02s507.png" alt=""></p>
 <h3>The Response</h3>
 <p>BEFORE</p>
-<p><img src="../lab03/images/lab02s506.png" alt=""></p>
+<p><img src="img/lab02s506.png" alt=""></p>
 <p>AFTER</p>
-<p><img src="../lab03/images/lab02s508.png" alt=""></p>
+<p><img src="img/lab02s508.png" alt=""></p>
 <p>GET all donations again to confirm the update</p>
-<p><img src="../lab03/images/lab02s509.png" alt=""></p>
+<p><img src="img/lab02s509.png" alt=""></p>
 <hr>
 
       </div>
@@ -463,7 +463,7 @@ module.exports = mongoose.model(&#39;Donation&#39;, DonationSchema);</code></pre
      
       <div  class="ui tab segment lab" data-tab="Solution">
         <h1>Solution - Lab 3</h1>
-<p>You can find the solution to this lab <strong><a href="../zips/donationweb-2.0.zip">here</a></strong>.</p>
+<p>You can find the solution to this lab <strong><a href="archives/donationweb-2.0.zip">here</a></strong>.</p>
 
       </div>
      
