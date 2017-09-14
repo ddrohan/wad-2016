@@ -2,23 +2,27 @@
  <html>
    <head>
 
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
 
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-      <style>
-        
+     
+
+     <style>
+       
 
 body 
 {
@@ -36,283 +40,373 @@ figcaption
   align-items: center;
 }
 
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
 
 
-    </style>
 
-  </head>
+     </style>
+
+   </head>
 
   <body>
     
 
 
-  
+  <header class="ui center aligned middle aligned stackable grid segment">
 
-
-
-
-
-<header class="ui middle aligned center aligned stackable grid segment">
-
+    
+      
   <a class="ui blue left corner label">
-  <div id="showTOC" class="popup" data-content="Reveal TOC">
-    <i id="toc" class="sitemap big  icon"></i>
-  </div>
-</a>
+    <div id="showTOC" class="popup" data-content="Reveal TOC">
+      <i id="toc" class="sitemap big  icon"></i>
+    </div>
+  </a>
 
-  <div class="seven wide center aligned column">
-    <h2 class="headder"> Web App Development 2</h2>
-    <p> All Labs in the Course </p>
+    
+
+    <div class="ui five wide column">
+      <h2> Web App Development 2 </h2>
+    </div>
+
+    <div class="ui two wide column">
+      
+          
+  <div class="two wide column sitemap">
+    <div class="popup" data-content="To the top level Topics for this Module...">
+      <a href="index.html"> <i class="huge home icon"></i> <br> Module Home </a>
+    </div>
   </div>
+
+        
+    </div>
+
+    
+
+    <div class="ui three wide column">
+      
+  <div class="four wide column">
+    <div class="ui center aligned mini message segment">
+      David Drohan (ddrohan@wit.ie).
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+
+    </div>
+
+    <div class="three wide column">
+      
+        
+  <div class="ui equal width center aligned grid segment">
+    
+      
+        <div class="column">
+          <div class="popup" data-content="All talk's in Course">
+            <a href="talkwall.html"> <i class="big object group icon"></i> </a>
+            <div class="ui blue mini circular label">
+              10
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="column">
+          <div class="popup" data-content="All lab's in Course">
+            <a href="labwall.html"> <i class="big lab icon"></i> </a>
+            <div class="ui blue mini circular label">
+              7
+            </div>
+          </div>
+        </div>
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+
+      
+    </div>
+
+
+  </header>
+  
+  
+
+
+
+  <div class="ui bottom attached segment pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      
+    </div>
+    <div class="pusher">
+      <div class="ui container">
+        <div class="ui basic segment">
+          <div class="ui centered four doubling stackable cards">
+            
+              
+                
 
   
-<div class="two wide column sitemap">
-  <div class="popup" data-content="Top Level Topic View">
-    <a href="index.html"> <i class="huge home icon"></i> Topics </a>
-  </div>
-</div>
+    <a class="ui raised link card" href="topic01-intro/book-a-lab00/index.html">
+  
+
+      <div class="center aligned content">
+        <div class="right floated meta"><i class="huge lab icon"></i></div>
+        <div class="header"> Setup</div>
+      </div>
+
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic01-intro/book-a-lab00/img/main.gif">
+      </div>
+
+      <div class="center aligned content">
+        <div class="description">
+          <p>This is where you can find all the info you need to setup your MEAN build environment.</p>
+
+        </div>
+      </div>
+
+      
+
+    </a>
+
+
+              
+            
+              
+                
 
   
-<div class="four wide column">
-  <div class="ui center aligned mini message segment">
-    David Drohan (ddrohan@wit.ie).
-    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-        target="_blank">Creative Commons License
+    <a class="ui raised link card" href="topic02-node/book-a-lab01/index.html">
+  
+
+      <div class="center aligned content">
+        <div class="right floated meta"><i class="huge lab icon"></i></div>
+        <div class="header"> Lab-01</div>
+      </div>
+
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic02-node/book-a-lab01/img/main.png">
+      </div>
+
+      <div class="center aligned content">
+        <div class="description">
+          <p>In this lab we&#39;re going to build a very simple Node Web App using the <strong>WebStorm</strong> IDE. If you haven&#39;t done so already, get it set up by following the WebStorm IDE Setup. This web app won&#39;t have much functionality but it will take you through the process of building a Node Web app using WebStorm.</p>
+
+        </div>
+      </div>
+
+      
+
     </a>
-  </div>
-</div>
+
+
+              
+            
+              
+                
 
   
-<div class="ui two wide right aligned column">
-  <div class="ui left aligned middle aligned very basic grid">
-    <div class="row">
-      <div class="popup" data-content="All Slides in Course">
-        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+    <a class="ui raised link card" href="topic02-node/book-b-lab02/index.html">
+  
+
+      <div class="center aligned content">
+        <div class="right floated meta"><i class="huge lab icon"></i></div>
+        <div class="header"> Lab-02</div>
       </div>
-    </div>
-    <div class="row">
-      <div class="popup" data-content="All Labs in Course">
-        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic02-node/book-b-lab02/img/main.png">
+      </div>
+
+      <div class="center aligned content">
+        <div class="description">
+          <p>In this lab we will be using our WebStorm IDE to build a simple Node/Express Server to initially act as a Web Service APi for a related Android Mobile App, and eventually it will be our back-end to a full MEAN Stack Web App.</p>
+
+        </div>
+      </div>
+
+      
+
+    </a>
+
+
+              
+            
+              
+                
+
+  
+    <a class="ui raised link card" href="topic03-node-mongo/book-c-lab03/index.html">
+  
+
+      <div class="center aligned content">
+        <div class="right floated meta"><i class="huge lab icon"></i></div>
+        <div class="header"> Lab-03</div>
+      </div>
+
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic03-node-mongo/book-c-lab03/img/main.png">
+      </div>
+
+      <div class="center aligned content">
+        <div class="description">
+          <p>In this lab we will be introducing some proper persistence, through a <strong>MongoDB</strong> backend, and if we have time, deploying our <strong><em>local web server</em></strong> to <strong><em>heroku</em></strong> so that everyone can see our web app!</p>
+
+        </div>
+      </div>
+
+      
+
+    </a>
+
+
+              
+            
+              
+                
+
+  
+    <a class="ui raised link card" href="topic04-angular/book-d-lab04/index.html">
+  
+
+      <div class="center aligned content">
+        <div class="right floated meta"><i class="huge lab icon"></i></div>
+        <div class="header"> Lab-04</div>
+      </div>
+
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic04-angular/book-d-lab04/img/main.png">
+      </div>
+
+      <div class="center aligned content">
+        <div class="description">
+          <p>This lab involves building your 1st Angular Web App - <strong>Donation 3.0</strong>.</p>
+
+        </div>
+      </div>
+
+      
+
+    </a>
+
+
+              
+            
+              
+                
+
+  
+    <a class="ui raised link card" href="topic04-angular/book-e-lab05/index.html">
+  
+
+      <div class="center aligned content">
+        <div class="right floated meta"><i class="huge lab icon"></i></div>
+        <div class="header"> Lab-05</div>
+      </div>
+
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic04-angular/book-e-lab05/img/main.png">
+      </div>
+
+      <div class="center aligned content">
+        <div class="description">
+          <p>This lab involves adding some proper functionality to our Angular Web App - <strong>Donation 4.0</strong>.</p>
+
+        </div>
+      </div>
+
+      
+
+    </a>
+
+
+              
+            
+              
+                
+
+  
+    <a class="ui raised link card" href="topic04-angular/book-f-heroku/index.html">
+  
+
+      <div class="center aligned content">
+        <div class="right floated meta"><i class="huge lab icon"></i></div>
+        <div class="header"> Deploy-to-Heroku</div>
+      </div>
+
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic04-angular/book-f-heroku/img/main.png">
+      </div>
+
+      <div class="center aligned content">
+        <div class="description">
+          <p>As a related exercise (and a useful one!) you should complete this lab in the context of your own Node Web App, and deploy your app to Heroku.</p>
+
+        </div>
+      </div>
+
+      
+
+    </a>
+
+
+              
+            
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-
-</header>
-
-
-
-<div class="ui bottom attached segment pushable">
-  <div class="ui inverted labeled icon left inline vertical sidebar menu">
-    
-    <a class="item" href="topic01-intro/book-a-lab00/index.html">
-      Setup
-    </a>
-    
-    <a class="item" href="topic02-node/book-a-lab01/index.html">
-      Lab-01
-    </a>
-    
-    <a class="item" href="topic02-node/book-b-lab02/index.html">
-      Lab-02
-    </a>
-    
-    <a class="item" href="topic03-node-mongo/book-c-lab03/index.html">
-      Lab-03
-    </a>
-    
-    <a class="item" href="topic04-angular/book-d-lab04/index.html">
-      Lab-04
-    </a>
-    
-    <a class="item" href="topic04-angular/book-e-lab05/index.html">
-      Lab-05
-    </a>
-    
-    <a class="item" href="topic04-angular/book-f-heroku/index.html">
-      Deploy-to-Heroku
-    </a>
-    
-  </div>
-  <div class="pusher">
-    <div class="ui basic segment">
-      <div class="ui four doubling stackable cards">
-        
-        
-  <a class="ui raised link card" href="topic01-intro/book-a-lab00/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Setup </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic01-intro/book-a-lab00/img/main.gif">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>This is where you can find all the info you need to setup your MEAN build environment.Before you attempt any of the labs, Make sure you have the <strong>WebStorm</strong> IDE installed and configured. If you want to go &#39;old school&#39; I&#39;d recommend downloading and installing sublime text to use as your JS editor - you can use any text editor you like, but I&#39;ll be using <strong>WebStorm</strong> for all the labs.You can visit the live site at donationweb.herokuapp.com, to get an idea of what you&#39;ll be developing throughout the labs.You can check out the completed web app connected to a mongodb database hosted on mongolab deployed to heroku here donationweb-4-0.herokuapp.com.</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic02-node/book-a-lab01/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-01 </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic02-node/book-a-lab01/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>In this lab we&#39;re going to build a very simple Node Web App using the <strong>WebStorm</strong> IDE. If you haven&#39;t done so already, get it set up by following the WebStorm IDE Setup. This web app won&#39;t have much functionality but it will take you through the process of building a Node Web app using WebStorm.Once completed and running, your Node Server Landing Page will be at localhost:3000)</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic02-node/book-b-lab02/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-02 </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic02-node/book-b-lab02/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>In this lab we will be using our WebStorm IDE to build a simple Node/Express Server to initially act as a Web Service APi for a related Android Mobile App, and eventually it will be our back-end to a full MEAN Stack Web App.</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic03-node-mongo/book-c-lab03/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-03 </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic03-node-mongo/book-c-lab03/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>In this lab we will be introducing some proper persistence, through a <strong>MongoDB</strong> backend, and if we have time, deploying our <strong><em>local web server</em></strong> to <strong><em>heroku</em></strong> so that everyone can see our web app!Here&#39;s a link to some of the commands you&#39;ll be using throughout the lab [QuickLinks] docs.mongodb.org/master/tutorial/getting-started-with-the-mongo-shell/ but most of what we do in this lab we&#39;ll have covered in the lectures.</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic04-angular/book-d-lab04/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-04 </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic04-angular/book-d-lab04/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>This lab involves building your 1st Angular Web App - <strong>Donation 3.0</strong>.To begin with, it won&#39;t actually do much, but it will give you an introduction to some of the basics of what constitutes an Angular Web App, and set up the navigation we need for all the pages in our existing Donation Web App Server.</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic04-angular/book-e-lab05/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Lab-05 </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic04-angular/book-e-lab05/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>This lab involves adding some proper functionality to our Angular Web App - <strong>Donation 4.0</strong>.In this lab we&#39;ll add the ability to make a Donation, list all the Donations and be able to delete an individual Donation.</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-        
-  <a class="ui raised link card" href="topic04-angular/book-f-heroku/index.html">
-    <div class="content">
-        <div class="right floated meta"> <i class="lab large icon"></i></div>
-        <div class="header"> Deploy-to-Heroku </div>
-    </div>
-    <div class="image">
-      <img class="ui bordered rounded image" src="topic04-angular/book-f-heroku/img/main.png">
-    </div>
-    <div class="content">
-      <div class="description">
-         <p>As a related exercise (and a useful one!) you should complete this lab in the context of your own Node Web App, and deploy your app to Heroku.</p>
-
-      </div>
-    </div>
-    
-  </a>
-
-        
-      </div>
-    </div>
-  </div>
-</div>
 
 
     <footer>
 
     </footer>
     <script>
-      
-$(document).ready(function()
-{
-  $("img").addClass ("ui image");
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
   $('.ui.embed').embed();
 
-  var images = $(".lab img");
-  jQuery.each(images, function(i)  {
-    if((images[i].alt).length > 0)
-    {
-      var div_img = $(document.createElement("div")).addClass("ui segment");
-      $(images[i]).wrap(div_img);
-      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
-      div_label.append(images[i].alt);
-      $(div_label).insertBefore(images[i]);
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
     }
   });
 
-
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
     </script>
